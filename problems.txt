@@ -1,0 +1,5 @@
+Problem 01: Make a function that convert temperature from celcius (°C) to fahrenheit (°F) and from fahrenheit (°F) to celcius (°C).
+- Fahrenheit = (Celcius * 9/5) + 32
+- Celcius = (fahrenheit - 32) * 5/9
+
+Problem 02: Make a calculator.
