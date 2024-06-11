@@ -6,7 +6,7 @@ function celciusToFahrenheit(temperature) {
 };
 
 function fahrenheitToCelcius(temperature) {
-  return `${(temperature - 32) * 5/9}°C`;
+  return `${(temperature - 32) * 5 / 9}°C`;
 };
 
 console.log(celciusToFahrenheit(-5))
@@ -14,3 +14,13 @@ console.log(fahrenheitToCelcius(86))
 
 // Problem 02: Make a calculator
 // 'calculator/'
+
+// Problem 03: Imagine an amusement park that has a discount for children (5 years and younger) or seniors (65 years and older). If the person qualifies for discount  display 'Discout' in console otherwise display 'No Discount' in console. Discount is only available if it is not holiday, in order to get discount people must meet the age requirement and it is also not a holiday.
+const age = 32;
+const holiday = false;
+
+if ((age <= 5 || age >= 65) && !holiday) {
+  console.log('Discount');
+} else {
+  console.log('No Discount');
+}

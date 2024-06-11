@@ -3,3 +3,5 @@ Problem 01: Make a function that convert temperature from celcius (°C) to fahre
 - Celcius = (fahrenheit - 32) * 5/9
 
 Problem 02: Make a calculator.
+
+Problem 03: Imagine an amusement park that has a discount for children (5 years and younger) or seniors (65 years and older). If the person qualifies for discount  display 'Discout' in console otherwise display 'No Discount' in console. Discount is only available if it is not holiday, in order to get discount people must meet the age requirement and it is also not a holiday.
