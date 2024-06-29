@@ -5,3 +5,24 @@ Problem 01: Make a function that convert temperature from celcius (°C) to fahre
 Problem 02: Make a calculator.
 
 Problem 03: Imagine an amusement park that has a discount for children (5 years and younger) or seniors (65 years and older). If the person qualifies for discount  display 'Discout' in console otherwise display 'No Discount' in console. Discount is only available if it is not holiday, in order to get discount people must meet the age requirement and it is also not a holiday.
+
+Problem 04: A coin-flip game
+
+Problem 05: Create a function 'convertTemperature(degrees, unit)' that takes a number and a unit ('C' or 'F'), and converts it into the other unit. convertTemperature (25, 'C') => '77F' convertTemperature (86, 'F') => '30C'
+
+Problem 06: Create a function convertLength(length, from, to) that takes a number and a unit ('km' or 'miles') and converts the length to another unit ('km' or 'miles'). Note: 1 mile = 1.6 km (approximately).
+- convertLength(50, 'miles', 'km') => '80 km'
+- convertLength(32, 'km', 'miles') => '20 miles' 
+- convertLength(50, 'km', 'km') => '50 km'
+
+
+
+
+7h. Update convertLength to support converting between km, miles,
+and also feet. Note: 1 mile = 5280 ft, 1 km = 3281 ft (approximately).
+convertLength(5, 'miles', 'km') => '8 km'
+convertLength(5, 'miles', 'ft') => '26400 ft'
+convertLength(5, 'km', 'ft') => '16405 ft'
+
+7i. Update convertLength so that if you give it an invalid unit, it will return `Invalid unit: ${unit}`.
+convertLength(5, 'Ibs', 'Ibs') => 'Invalid unit: Ibs'
