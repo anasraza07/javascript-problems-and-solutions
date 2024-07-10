@@ -53,20 +53,39 @@ function convertTemperature(degrees, unit) {
 console.log(convertTemperature(25, 'C'));
 console.log(convertTemperature(86, 'F'));
 
-// Problem 06: Create a function convertLength(length, from, to) that takes a number and a unit ('km' or 'miles') and converts the length to another unit ('km' or 'miles'). Note: 1 mile = 1.6 km (approximately).
+// Problem 06: Create a function convertLength(length, from, to) that takes a number and a unit ('km', 'miles', 'feet') and converts the length to another unit ('km', miles', 'feet'). Note: 1 mile = 1.6 km, 1 km = 3281 ft, 1 mile = 5280 ft (approximately).
 // - convertLength(50, 'miles', 'km') => '80 km'
 // - convertLength(32, 'km', 'miles') => '20 miles' 
 // - convertLength(50, 'km', 'km') => '50 km'
+// Problem 6.1: Update convertLength to support converting between feet also.
+// - convertLength(5, 'miles', 'ft') => '26400 ft'
+// - convertLength(5, 'km', 'ft') => '16405 ft'
+// Problem 6.2: Update convertLength so that if you give it an invalid unit, it will return `Invalid unit: ${unit}`.
+// - convertLength(5, 'Ibs', 'Ibs') => 'Invalid unit: Ibs'
 function convertLength(length, from, to) {
   let result;
   if (from === 'km' && to === 'miles') {
-    result = length / 1.6
-  } else if (from === 'miles' && to === 'km') {
-    result = length * 1.6
-  } else if (from === to) {
-    result = length
+    result = length / 1.6;
+  } else if (from === 'km' && to === 'ft') {
+    result = length * 3281;
+  }
+
+  else if (from === 'miles' && to === 'km') {
+    result = length * 1.6;
+  } else if (from === 'miles' && to === 'ft') {
+    result = length * 5280;
+  }
+
+  else if (from === 'ft' && to === 'km') {
+    result = length / 3281;
+  } else if (from === 'ft' && to === 'miles') {
+    result = length / 5280;
+  }
+
+  else if (from === to && (from === 'km' || from === 'miles' || from === 'ft')) {
+    result = length;
   } else {
-    return 'Invalid Values';
+    result = 'Invalid unit:';
   }
 
   return `${result} ${to}`;
@@ -74,4 +93,8 @@ function convertLength(length, from, to) {
 
 console.log(convertLength(50, 'miles', 'km'));
 console.log(convertLength(32, 'km', 'miles'));
+console.log(convertLength(5, 'miles', 'ft'))
 console.log(convertLength(50, 'km', 'km'));
+console.log(convertLength(5, 'km', 'ft')) 
+console.log(convertLength(5, 'Ibs', 'Ibs'))
+
