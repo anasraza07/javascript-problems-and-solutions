@@ -58,12 +58,19 @@ console.log(convertTemperature(86, 'F'));
 // - convertLength(32, 'km', 'miles') => '20 miles' 
 // - convertLength(50, 'km', 'km') => '50 km'
 // Problem 6.1: Update convertLength to support converting between feet also.
+// - convertLength(5, 'miles', 'km') => '8 km'
 // - convertLength(5, 'miles', 'ft') => '26400 ft'
 // - convertLength(5, 'km', 'ft') => '16405 ft'
 // Problem 6.2: Update convertLength so that if you give it an invalid unit, it will return `Invalid unit: ${unit}`.
 // - convertLength(5, 'Ibs', 'Ibs') => 'Invalid unit: Ibs'
 function convertLength(length, from, to) {
   let result;
+  if (from !== 'km' && from !== 'miles' && from !== 'ft') {
+    return `Invalid unit: ${from}`;
+  } else if (to !== 'km' && to !== 'miles' && to !== 'ft') {
+    return `Invalid unit: ${to}`;
+  }
+
   if (from === 'km' && to === 'miles') {
     result = length / 1.6;
   } else if (from === 'km' && to === 'ft') {
@@ -82,10 +89,8 @@ function convertLength(length, from, to) {
     result = length / 5280;
   }
 
-  else if (from === to && (from === 'km' || from === 'miles' || from === 'ft')) {
+  else if (from === to) {
     result = length;
-  } else {
-    result = 'Invalid unit:';
   }
 
   return `${result} ${to}`;
@@ -95,6 +100,6 @@ console.log(convertLength(50, 'miles', 'km'));
 console.log(convertLength(32, 'km', 'miles'));
 console.log(convertLength(5, 'miles', 'ft'))
 console.log(convertLength(50, 'km', 'km'));
-console.log(convertLength(5, 'km', 'ft')) 
+console.log(convertLength(5, 'km', 'ft'))
 console.log(convertLength(5, 'Ibs', 'Ibs'))
 

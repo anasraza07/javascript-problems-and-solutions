@@ -1,0 +1,1 @@
+Best Practice: We should put invalid checks at the top since it's a bit easier to see. Also, if something is invalid, we can skip the rest of the function.

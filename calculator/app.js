@@ -10,7 +10,6 @@ function displayNumber(number) {
 
     localStorage.setItem('calculation', calculation);
 
-    //  console.log(calculation);
     displayCalculation();
 };
 
@@ -22,12 +21,10 @@ function calculate() {
     calculation = eval(calculation);
     localStorage.setItem('calculation', calculation);
     displayCalculation();
-    //  console.log(calculation);
 };
 
 function resetCalculation() {
     calculation = "0";
-    // console.log(calculation);
     localStorage.setItem('calculation', calculation);
     displayCalculation();
 };
