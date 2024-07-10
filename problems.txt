@@ -15,11 +15,12 @@ Problem 06: Create a function convertLength(length, from, to) that takes a numbe
 - convertLength(32, 'km', 'miles') => '20 miles' 
 - convertLength(50, 'km', 'km') => '50 km'
 
-Problem 07: Update convertLength to support converting between km, miles,
+Problem 6.1: Update convertLength to support converting between km, miles,
 and also feet. Note: 1 mile = 5280 ft, 1 km = 3281 ft (approximately).
 - convertLength(5, 'miles', 'km') => '8 km'
 - convertLength(5, 'miles', 'ft') => '26400 ft'
 - convertLength(5, 'km', 'ft') => '16405 ft'
 
-Problem 08: Update convertLength so that if you give it an invalid unit, it will return `Invalid unit: ${unit}`.
+Problem 6.2: Update convertLength so that if you give it an invalid unit, it will return `Invalid unit: ${unit}`.
 convertLength(5, 'Ibs', 'Ibs') => 'Invalid unit: Ibs'
+
