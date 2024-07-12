@@ -24,3 +24,9 @@ and also feet. Note: 1 mile = 5280 ft, 1 km = 3281 ft (approximately).
 Problem 6.2: Update convertLength so that if you give it an invalid unit, it will return `Invalid unit: ${unit}`.
 convertLength(5, 'Ibs', 'Ibs') => 'Invalid unit: Ibs'
 
+Problem 7.1: Let's say in the Amazon project, we have a basketball product. This product has a name of 'basketball', a price of 2095 cents. Create an object to represent this product and display it in the console.
+Problem 7.2: let's say we want to increase the price by 500 cents. Use dot notation to increase the price, and display the updated object in the console.
+Problem 7.3: Using bracket notation, add a property 'delivery-time' to the object with the value '3 days'. Display the updated object in the console. 
+
+Problem 08: Create a function 'comparePrice(product1, product2)', which takes 2 products (with 'name' and 'price' properties) and returns the product that is less expensive. Create 2 products and try out the function.
+

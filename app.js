@@ -1,3 +1,4 @@
+/*
 // Problem 01: Make a function that convert temperature from celcius (°C) to fahrenheit (°F) and from fahrenheit (°F) to celcius (°C).
 // Fahrenheit = (Celcius * 9/5) + 32
 // Celcius = (fahrenheit - 32) * 5/9
@@ -102,4 +103,31 @@ console.log(convertLength(5, 'miles', 'ft'))
 console.log(convertLength(50, 'km', 'km'));
 console.log(convertLength(5, 'km', 'ft'))
 console.log(convertLength(5, 'Ibs', 'Ibs'))
+*/
 
+// Problem 7.1: Let's say in the Amazon project, we have a basketball product. This product has a name of 'basketball', a price of 2095 cents. Create an object to represent this product and display it in the console.
+// Problem 7.2: let's say we want to increase the price by 500 cents. Use dot notation to increase the price, and display the updated object in the console.
+// Problem 7.3: Using bracket notation, add a property 'delivery-time' to the object with the value '3 days'. Display the updated object in the console. 
+const product = {
+  name: 'basketball',
+  priceCents: 2095
+}
+
+product.priceCents += 500;
+product['delivery-time'] = '3 days';
+console.log(product);
+
+// Problem 08: Create a function 'comparePrice(product1, product2)', which takes 2 products (with 'name' and 'price' properties) and returns the product that is less expensive. Create 2 products and try out the function.
+function comparePrice(product1, product2) {
+  if (product1.priceCents < product2.priceCents) {
+    return product1;
+  } else {
+    return product2;
+  }
+};
+
+const product2 = {
+  name: 'hockey',
+  priceCents: 3000
+}
+console.log(comparePrice(product, product2));
