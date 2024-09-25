@@ -103,7 +103,6 @@ console.log(convertLength(5, 'miles', 'ft'))
 console.log(convertLength(50, 'km', 'km'));
 console.log(convertLength(5, 'km', 'ft'))
 console.log(convertLength(5, 'Ibs', 'Ibs'))
-*/
 
 // Problem 7.1: Let's say in the Amazon project, we have a basketball product. This product has a name of 'basketball', a price of 2095 cents. Create an object to represent this product and display it in the console.
 // Problem 7.2: let's say we want to increase the price by 500 cents. Use dot notation to increase the price, and display the updated object in the console.
@@ -125,9 +124,23 @@ function comparePrice(product1, product2) {
     return product2;
   }
 };
-
 const product2 = {
   name: 'hockey',
   priceCents: 3000
 }
 console.log(comparePrice(product, product2));
+*/
+
+// Problem 09: Create a function ‘isSameProduct(product1, product2)', which returns true if 2 products have the same values inside ('name' and 'price'). If not, return false. Create 2 products and try out the function. (Hint: objects are references so you can't compare them directly).
+function isSameProduct(product1, product2) {
+  return product1.name === product2.name && product1.price === product2.price;
+};
+const productOne = {
+  name: 'Raza',
+  price: 300,
+};
+const productTwo = {
+  name: 'Raza',
+  price: 300,
+};
+console.log(isSameProduct(productOne, productTwo));
