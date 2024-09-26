@@ -14,7 +14,8 @@ console.log(convertToFahrenheit(-5))
 console.log(convertToCelcius(86))
 
 // Problem 02: Make a calculator
-// 'calculator/'
+Problem 2.1: Add localStorage to the calculator project. Whenever we update the calculation, save it using .setItem() When the page is loaded, get the calculation using .getItem() Use a default value of if a calculation doesn't exist in local storage
+// solution => 'calculator/'
 
 // Problem 03: Imagine an amusement park that has a discount for children (5 years and younger) or seniors (65 years and older). If the person qualifies for discount  display 'Discout' in console otherwise display 'No Discount' in console. Discount is only available if it is not holiday, in order to get discount people must meet the age requirement and it is also not a holiday.
 const age = 32;
@@ -27,21 +28,11 @@ if ((age <= 5 || age >= 65) && !holiday) {
 }
 
 // Problem 04: A coin-flip game
-const randomNumber = Math.random();
-let result;
-
-if (randomNumber > 0.5) {
-  result = 'heads';
-} else {
-  result = 'tails';
-}
-
-const guess = 'heads';
-if (guess === result) {
-  console.log('You win!');
-} else {
-  console.log('You lose!')
-}
+4.1: We'll improve the coin flip game. Create 2 buttons to play the game heads tails
+When clicking 'heads' play the game with guess = 'heads'. When clicking 'tails' play the game with guess = 'tails'. Create a function 'playGame(guess)' to reuse the code.
+4.2: Create a score object { wins: 0, losses: 0 }, update the score each time after playing, and display the score in the console.
+4.3: Use localStorage to save and load the score (hint: you'll need to use JSON.stringify() to convert the score object to a string).
+// solution => 'coin-flip-game/'
 
 // Problem 05: Create a function 'convertTemperature(degrees, unit)' that takes a number and a unit ('C' or 'F'), and converts it into the other unit. convertTemperature (25, 'C') => '77F' convertTemperature (86, 'F') => '30C'
 function convertTemperature(degrees, unit) {
@@ -129,7 +120,6 @@ const product2 = {
   priceCents: 3000
 }
 console.log(comparePrice(product, product2));
-*/
 
 // Problem 09: Create a function ‘isSameProduct(product1, product2)', which returns true if 2 products have the same values inside ('name' and 'price'). If not, return false. Create 2 products and try out the function. (Hint: objects are references so you can't compare them directly).
 function isSameProduct(product1, product2) {
@@ -144,3 +134,4 @@ const productTwo = {
   price: 300,
 };
 console.log(isSameProduct(productOne, productTwo));
+*/
